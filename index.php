@@ -46,7 +46,7 @@
             <div class="col">
                 <div class="container-input d-flex gap-3 my-3 m-5">
                     <input type="text" v-model="text" class="form-control w-75" placeholder="Scrivi gli anime da aggiungere alla lista">
-                    <button class="btn btn-success w-25" @="addTodoItem">Aggiungi Anime</button>
+                    <button class="btn btn-success w-25" @click="addTodoItem">Aggiungi Anime</button>
                 </div>
             </div>
         </div>
