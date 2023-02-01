@@ -4,6 +4,19 @@
     box-sizing: border-box;
 }
 
+body{
+    background-color: rgba(0,22,50,255)!important;
+}
+
+h1{
+    color: rgba(109,118,125,255)!important;
+    font-size: 80px!important;
+}
+
+.card{
+    width: 500px;
+}
+
 .checked{
     text-decoration: line-through;
 }

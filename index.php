@@ -22,13 +22,13 @@
         </div>
         <!-- LISTA -->
         <div class="row">
-            <div class="col">
-                <div class="card m-5 p-4 height-card">
+            <div class="col d-flex justify-content-center">
+                <div class="card m-2 p-4 height-card">
                     <div class="row">
-                        <div class="col">
+                        <div class="col-12">
                             <div class="container-item">
                                 <ul class="list-unstyled">
-                                    <li class="d-flex justify-content-between align-items-center" v-for="todo in todoList">
+                                    <li class="d-flex justify-content-between align-items-center border-bottom" v-for="todo in todoList">
                                         <div class="my-3">
                                             {{todo.text}}
                                         </div>
@@ -43,8 +43,8 @@
         </div>
         <!-- INPUT -->
         <div class="row">
-            <div class="col">
-                <div class="container-input d-flex gap-3 my-3 m-5">
+            <div class="col d-flex justify-content-center">
+                <div class="container-input d-flex gap-3 my-3 m-5" style="width: 500px;">
                     <input type="text" v-model="text" class="form-control w-75" placeholder="Scrivi gli anime da aggiungere alla lista">
                     <button class="btn btn-success w-25" @click="addTodoItem">Aggiungi Anime</button>
                 </div>
