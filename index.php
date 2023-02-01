@@ -16,12 +16,39 @@
     <title>Document</title>
 </head>
 <body>
-    
-    <div id="app">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
 
+    <div id="app">
+        <!-- TITOLO -->
+        <div class="container title text-center p-2">
+            <h1>To Do List</h1>
+        </div>
+        <!-- LISTA -->
+        <div class="row">
+            <div class="col">
+                <div class="card m-5 p-4 height-card">
+                    <div class="row">
+                        <div class="col">
+                            <div class="container-item">
+                                <ul class="list-unstyled">
+                                    <li class="d-flex justify-content-between align-items-center">
+                                        <div class="my-3">
+                                            
+                                        </div>
+                                        <button class="btn btn-danger btn-square">x</button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- INPUT -->
+        <div class="row">
+            <div class="col">
+                <div class="container-input d-flex gap-3 my-3 m-5">
+                    <input type="text" class="form-control w-75" placeholder="Scrivi gli anime da aggiungere alla lista">
+                    <button class="btn btn-success w-25">Aggiungi Anime</button>
                 </div>
             </div>
         </div>
