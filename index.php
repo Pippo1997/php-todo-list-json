@@ -28,11 +28,11 @@
                         <div class="col-12">
                             <div class="container-item">
                                 <ul class="list-unstyled">
-                                    <li class="d-flex justify-content-between align-items-center border-bottom" v-for="todo in todoList">
+                                    <li class="d-flex justify-content-between align-items-center border-bottom" v-for="(todo, index) in todoList">
                                         <div class="my-3" :class="todo.done ? `checked` : ``" @click="check(todo)">
                                             {{todo.text}}
                                         </div>
-                                        <button class="btn btn-danger btn-square" @click="deleteItem(todo)"><i class="fa-solid fa-trash"></i></button>
+                                        <button class="btn btn-danger btn-square" @click="deleteItem(index)"><i class="fa-solid fa-trash"></i></button>
                                     </li>
                                 </ul>
                             </div>

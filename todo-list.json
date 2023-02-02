@@ -1,1 +1,26 @@
-[{"text":"Jujutsu Kaisen","done":true},{"text":"Naruto","done":true},{"text":"Death Note","done":false},{"text":"My Hero Academia","done":false},{"text":"One Pice","done":false},{"text":"One Punch","done":true},{"text":"Bleach","done":false}]
+[
+    {
+        "text": "Jujutsu Kaisen",
+        "done": true
+    },
+    {
+        "text": "Naruto",
+        "done": true
+    },
+    {
+        "text": "Death Note",
+        "done": false
+    },
+    {
+        "text": "My Hero Academia",
+        "done": false
+    },
+    {
+        "text": "One Pice",
+        "done": false
+    },
+    {
+        "text": "One Punch",
+        "done": true
+    }
+]

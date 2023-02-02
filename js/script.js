@@ -38,8 +38,16 @@ createApp({
             }
           },
 
-          deleteItem(todo){
-            this.todolist.splice(todo, 1);
+          deleteItem(index){
+            const data = {
+                delete: index
+            }
+
+            axios.post(this.apiUrl, data, {
+                headers: { 'Content-Type': 'multipart/form-data' }
+            }).then((response) => {
+                this.todolist =response.data
+            });
           },
     },
     mounted() {

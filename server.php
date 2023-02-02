@@ -8,6 +8,7 @@ $todo_list = json_decode($string, true);
 
 // 3 PASSAGGIO LOGICA (nella logica devo aggiungere un elemento nell'array e lo pusho dentro dato che è decodificato)
 if(isset($_POST['todoItem'])){
+
     $todo_item = $_POST['todoItem'];
     
     $todo_array = [
@@ -17,10 +18,18 @@ if(isset($_POST['todoItem'])){
 
     $todo_list[] = $todo_array;
 
-    file_put_contents('todo-list.json', json_encode($todo_list));
+    file_put_contents('todo-list.json', json_encode($todo_list, JSON_PRETTY_PRINT));
 }
 
-// 4 PASSAGGIO (lo ricodifico percè ci ho aggiunto un elemento nell'array)
+// 4 PASSAGGIO LOGICA (cancellazione elemento array)
+if(isset($_POST['delete'])){
+
+    unset($todo_list[$_POST['delete']]);
+
+    file_put_contents('todo-list.json', json_encode($todo_list, JSON_PRETTY_PRINT));
+}
+
+// 5 PASSAGGIO (lo ricodifico percè ci ho aggiunto un elemento nell'array)
 header('Content-Type: application/json');
 echo json_encode($todo_list);
 
