@@ -29,10 +29,10 @@
                             <div class="container-item">
                                 <ul class="list-unstyled">
                                     <li class="d-flex justify-content-between align-items-center border-bottom" v-for="todo in todoList">
-                                        <div class="my-3">
+                                        <div class="my-3" :class="todo.done ? `checked` : ``" @click="check(todo)">
                                             {{todo.text}}
                                         </div>
-                                        <button class="btn btn-danger btn-square"><i class="fa-solid fa-trash"></i></button>
+                                        <button class="btn btn-danger btn-square" @click="deleteItem(todo)"><i class="fa-solid fa-trash"></i></button>
                                     </li>
                                 </ul>
                             </div>
@@ -49,6 +49,9 @@
                     <button class="btn btn-success w-25" @click="addTodoItem">Aggiungi Anime</button>
                 </div>
             </div>
+        </div>
+        <div class="row" v-if="errorMessage != ''">
+            <p class="mt-2 text-danger text-center"><strong>{{ errorMessage }}</strong></p>
         </div>
     </div>
 

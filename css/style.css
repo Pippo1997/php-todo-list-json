@@ -6,6 +6,7 @@
 
 body{
     background-color: rgba(0,22,50,255)!important;
+    overflow: hidden;
 }
 
 h1{
